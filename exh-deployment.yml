@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gallery-exhibitions
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gallery-exhibitions
+  template:
+    metadata:
+      labels:
+        app: gallery-exhibitions
+    spec:
+      containers:
+        -
+          image: evakolds/exhibition
+          name: gallery-exhibitions
+          ports:
+            -
+              containerPort: 8081

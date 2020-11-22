@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: db-exhibition
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: db-exhibition
+  template:
+    metadata:
+      labels:
+        app: db-exhibition
+    spec:
+      containers:
+        - env:
+            - name: POSTGRES_DB
+              value: exhibition
+            - name: POSTGRES_PASSWORD
+              value: "password"
+            - name: POSTGRES_USER
+              value: postgres
+          image: postgres
+          imagePullPolicy: IfNotPresent
+          name: db-exhibition
+          ports:
+            - containerPort: 5432

@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gallery-visitors
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gallery-visitors
+  template:
+    metadata:
+      labels:
+        app: gallery-visitors
+    spec:
+      containers:
+        -
+          image: evakolds/visitor
+          name: gallery-visitors
+          ports:
+            -
+              containerPort: 8084

@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gallery-gw
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gallery-gw
+  template:
+    metadata:
+      labels:
+        app: gallery-gw
+    spec:
+      containers:
+        -
+          image: evakolds/gateway
+          name: gallery-gw
+          ports:
+            -
+              containerPort: 8080

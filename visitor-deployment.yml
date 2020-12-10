@@ -17,5 +17,7 @@ spec:
           image: evakolds/visitor
           name: gallery-visitors
           ports:
-            -
-              containerPort: 8084
+            - containerPort: 8084
+              name: rest
+            - containerPort: 7084
+              name: grpc

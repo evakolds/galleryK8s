@@ -17,5 +17,7 @@ spec:
           image: evakolds/gateway
           name: gallery-gw
           ports:
-            -
-              containerPort: 8080
+            - containerPort: 8080
+              name: rest
+            - containerPort: 7080
+              name: grpc

@@ -17,5 +17,7 @@ spec:
           image: evakolds/worker
           name: gallery-workers
           ports:
-            -
-              containerPort: 8085
+            - containerPort: 8085
+              name: rest
+            - containerPort: 7085
+              name: grpc

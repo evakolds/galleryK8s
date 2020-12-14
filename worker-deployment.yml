@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         -
-          image: evakolds/worker
+          image: evakolds/workers
           name: gallery-workers
           ports:
             - containerPort: 8085

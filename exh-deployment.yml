@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         -
-          image: evakolds/exhibition
+          image: evakolds/exhibitions
           name: gallery-exhibitions
           ports:
             -

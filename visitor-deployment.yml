@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         -
-          image: evakolds/visitor
+          image: evakolds/visitors
           name: gallery-visitors
           ports:
             - containerPort: 8084
